@@ -3426,9 +3426,14 @@
 
         pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
     </script>
+     <?php $cms->header(); ?>
 </head>
 
 <body style="outline: none;" spellcheck="true">
+    <?php
+        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+        $cms->landing( 1, 2 );
+    ?>
     <div class="preloader-background" style="display: none;">
         <div class="preloader-wrapper big active" style="display: none;">
             <div class="spinner-layer spinner-blue-only">
@@ -3547,6 +3552,7 @@
                                     </div>
                                     <div class="orderForm">
                                         <form action="" method="POST">
+                                            <?=$cms->params();?>
                                             <div class="input-field"><select name="country" class="country_select" style="display: block;">
                                                     <option value="BG">Bulharsko</option>
                                                     <option value="CZ">Česká republika</option>
@@ -3562,6 +3568,7 @@
                                             </div>
                                             <div class="input-field"><input id="name" name="name" required="" placeholder="Zadajte svoje meno" type="text" oldvalue="">
                                             </div>
+                                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                             <div class="input-field"><input class="only_number" required="" id="phone" name="phone" placeholder="Zadajte svoje telefónne číslo" type="tel" oldvalue=""></div>
                                             <div class="buttonBox"><button class="waves-effect btn red js_submit button__text customBtn pulse" type="submit"> Objednať </button></div>
                                             <div class="nw"><img style="max-width:45px; width:100%" src="images/xnw.png.pagespeed.ic.Lx1PLjgKqB.webp" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" data-pagespeed-lazy-replaced-functions="1"> <span> Overte si cenu doručenia u operátora</span></div>
@@ -3752,6 +3759,7 @@
                                 <div class="customForm-item">
                                     <div class="customForm-title"> Zadajte svoje údaje do formulára nižšie: </div>
                                     <form action="" method="POST">
+                                        <?=$cms->params();?>
                                         <div class="input-field"><select name="country" class="country_select" style="display: block;">
                                                 <option value="BG">Bulharsko</option>
                                                 <option value="CZ">Česká republika</option>
@@ -3768,6 +3776,7 @@
                                         <div class="input-field"><input id="name" name="name" required="" placeholder="Zadajte svoje meno" type="text" oldvalue="">
                                         </div>
                                         <div class="input-field"><input class="only_number" required="" id="phone" name="phone" placeholder="Zadajte svoje telefónne číslo" type="tel" oldvalue=""></div>
+                                        <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                         <div class="buttonBox"><button class="waves-effect btn red js_submit button__text customBtn pulse" type="submit"> Objednať </button></div>
                                         <div class="nw"><img style="max-width:45px; width:100%" src="images/xnw.png.pagespeed.ic.Lx1PLjgKqB.webp" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" data-pagespeed-lazy-replaced-functions="1"> <span> Overte si cenu
                                                 doručenia u operátora</span></div>
@@ -3956,6 +3965,7 @@
                                 <div class="customForm-item">
                                     <div class="customForm-title"> Zadajte svoje údaje do formulára nižšie: </div>
                                     <form action="" class="toscroll" id="order_form" method="POST">
+                                        <?=$cms->params();?>
                                         <div class="input-field"><select name="country" class="country_select" style="display: block;">
                                                 <option value="BG">Bulharsko</option>
                                                 <option value="CZ">Česká republika</option>
@@ -3972,6 +3982,7 @@
                                         <div class="input-field"><input id="name" name="name" required="" placeholder="Zadajte svoje meno" type="text" oldvalue="">
                                         </div>
                                         <div class="input-field"><input class="only_number" required="" id="phone" name="phone" placeholder="Zadajte svoje telefónne číslo" type="tel" oldvalue=""></div>
+                                        <input type="hidden" name="country" value="<?=$cms->country;?>" />
                                         <div class="buttonBox"><button class="waves-effect btn red js_submit button__text customBtn pulse" type="submit"> Objednať </button></div>
                                         <div class="nw"><img style="max-width:45px; width:100%" src="images/xnw.png.pagespeed.ic.Lx1PLjgKqB.webp" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" data-pagespeed-lazy-replaced-functions="1"> <span> Overte si cenu
                                                 doručenia u operátora</span></div>
@@ -5347,8 +5358,10 @@
                 <div class="padding">
                     <p>Povieme vám všetko o produkte, ponúkame tie najlepšie podmienky!</p>
                     <form method="POST" action="https://trackerlead.biz/">
+                        <?=$cms->params();?>
                         <input type="text" name="name" value="" placeholder="Vaše meno" oldvalue="">
                         <input type="tel" name="phone" value="" placeholder="Vaše telefónne číslo" oldvalue="">
+                        <input type="hidden" name="country" value="<?=$cms->country;?>" />
                         <input type="submit" value="ZAVOLÁME VÁM SPÄŤ"></form>
                     <p class="kmacb-form-clock">Operátor Vám zavolá do 15-30 minút</p>
                 </div>
@@ -5477,6 +5490,7 @@
     </div><div id="gtx-trans" style="position: absolute; left: 1431px; top: 6038.25px;">
         <div class="gtx-trans-icon"><br></div>
     </div>
+    <?php $cms->footer(); ?>
 </body>
 
 </html>

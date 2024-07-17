@@ -1,4 +1,11 @@
-<html class="no-js" dir="ltr" lang="">
+<html class="no-js" dir="ltr" lang="sk">
+<?php
+    $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+    $cms->landing( 1, 2 );
+
+    $cms->thankspage = DIR . './success/success.php';
+    define( 'THANKSPAGE', $_SERVER['DOCUMENT_ROOT'] . './success/success.php' );
+?>
 
 <head>
     <script async="" src="https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js"></script>
@@ -3430,10 +3437,6 @@
 </head>
 
 <body style="outline: none;" spellcheck="true">
-    <?php
-        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
-        $cms->landing( 1, 2 );
-    ?>
     <div class="preloader-background" style="display: none;">
         <div class="preloader-wrapper big active" style="display: none;">
             <div class="spinner-layer spinner-blue-only">
@@ -3523,7 +3526,7 @@
                                     };
                                 </script><img alt="" data-pagespeed-high-res-src="images/DM_NormCaps_blister_box_3D.png" src="images/DM_NormCaps_blister_box_3D.png" onload="pagespeed.switchToHighResAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">﻿
                                 <div class="obj saleBox">
-                                    <span>-50% </span>
+                                    <span><?=$cms->discount;?></span>
                                 </div>
                             </div>
                         </div>
@@ -3540,13 +3543,13 @@
                                         <div class="priceBox-item">
                                             <div class="oldPrice">
                                                 <div class="priceBox-title"> Plná cena: </div>
-                                                <div class="priceBox-info"><span class="old old_1">78 eur </span></div>
+                                                <div class="priceBox-info"><span class="old old_1"><?=$cms->oldpr;?> </span></div>
                                             </div>
                                         </div>
                                         <div class="priceBox-item">
                                             <div class="newPrice">
                                                 <div class="priceBox-title"> Znížená cena: </div>
-                                                <div class="priceBox-info"><span class="new new_1">39 eur </span></div>
+                                                <div class="priceBox-info"><span class="new new_1"><?=$cms->price;?> eur </span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3730,7 +3733,7 @@
                             <div class="dflex customForm">
                                 <div class="customForm-item">
                                     <div class="saleBox">
-                                        <span> -50% </span>
+                                        <span><?=$cms->discount;?></span>
                                     </div>
                                     <div class="dflex customForm-header">
                                         <div class="formBox-header__text"> Počet balíčkov je obmedzený: </div>
@@ -3742,13 +3745,13 @@
                                         <div class="priceBox-item">
                                             <div class="oldPrice">
                                                 <div class="priceBox-title"> Plná cena: </div>
-                                                <div class="priceBox-info"><span class="old old_1"><span class="price_land_s4">78</span> <span class="price_land_curr">Euro</span> </span></div>
+                                                <div class="priceBox-info"><span class="old old_1"><span class="price_land_s4"><?=$cms->oldpr;?></span> <span class="price_land_curr">Euro</span> </span></div>
                                             </div>
                                         </div>
                                         <div class="priceBox-item">
                                             <div class="newPrice">
                                                 <div class="priceBox-title"> Znížená cena: </div>
-                                                <div class="priceBox-info"><span class="new new_1"><span class="price_land_s1">39</span> <span class="price_land_curr">Euro</span> </span></div>
+                                                <div class="priceBox-info"><span class="new new_1"><span class="price_land_s1"><?=$cms->price;?></span> <span class="price_land_curr">Euro</span> </span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -3936,7 +3939,7 @@
                             <div class="dflex customForm">
                                 <div class="customForm-item">
                                     <div class="saleBox">
-                                        <span> -50% </span>
+                                        <span><?=$cms->discount;?></span>
                                     </div>
                                     <div class="dflex customForm-header">
                                         <div class="formBox-header__text"> Počet balíčkov je obmedzený: </div>
@@ -3948,13 +3951,13 @@
                                         <div class="priceBox-item">
                                             <div class="oldPrice">
                                                 <div class="priceBox-title"> Plná cena: </div>
-                                                <div class="priceBox-info"><span class="old old_1"><span class="price_land_s4">78</span> <span class="price_land_curr">Euro</span> </span></div>
+                                                <div class="priceBox-info"><span class="old old_1"><span class="price_land_s4"><?=$cms->oldpr;?></span> <span class="price_land_curr">Euro</span> </span></div>
                                             </div>
                                         </div>
                                         <div class="priceBox-item">
                                             <div class="newPrice">
                                                 <div class="priceBox-title"> Znížená cena: </div>
-                                                <div class="priceBox-info"><span class="new new_1"><span class="price_land_s1">39</span> <span class="price_land_curr">Euro</span> </span></div>
+                                                <div class="priceBox-info"><span class="new new_1"><span class="price_land_s1"><?=$cms->price;?></span> <span class="price_land_curr">Euro</span> </span></div>
                                             </div>
                                         </div>
                                     </div>
